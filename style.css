@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     color: #000;
+    font-family: Arial, sans-serif;
 }
 
 ul {
@@ -21,10 +22,7 @@ ul a:hover, .foo-bar>p>a:hover {
 nav a {
     display: block;
     padding: 5px 10px;
-}
-
-svg {
-    width: 20px;
+    font-size: 13px;
 }
 
 header {
@@ -45,6 +43,60 @@ main {
     height: 33vh;
 }
 
+#lang {
+    font-size: 13px;
+    margin-top: 30px;
+}
+
+#lang a {
+    text-decoration: none;
+    margin: 0 3px;
+}
+
+#lang a:hover {
+    text-decoration: underline;
+}
+
+.button , .foo-bar {
+    font-size: 14px;
+}
+
+.button {
+    background-color: rgb(248, 249, 250);
+    padding: 8px 15px;
+    margin: 5px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.button:hover {
+    box-shadow: 1px 1px 1px #dfe1e5;
+    border: 1px solid #dfe1e5;
+}
+
+#search-bar {
+    width: 450px;
+    height: 45px;
+    font-size: 16px;
+    padding-left: 45px;
+    border-radius: 25px;
+    border: 1px solid #dfe1e5;
+    background-color: #ffffff;
+    margin: 20px 0 20px -20px; 
+}
+
+#search-bar:hover {
+    box-shadow: 2px 2px 4px 2px #dfe1e5;
+}
+
+svg {
+    width: 20px;
+    position: relative;
+    left: 20px;
+    top: 5px;
+    fill: rgb(154, 160, 166)
+}
+
 footer {
     position: absolute;
     bottom: 0;
@@ -57,16 +109,57 @@ footer {
     background-color: #F2F2F2;
     margin: 0;
     padding: 0;
+    color: rgb(112,117,122);
 }
 
 .foo-bar ul {
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
-.foo-bar p {
-    margin: 0;
+.foo-bar ul a {
+    font-size: 14px;
+    color: rgb(112,117,122);
+    padding: 10px 15px;
 }
+
+.foo-bar #country {
+    margin: 0;
+    padding: 10px 15px;
+}
+
+#country a {
+    font-size: 15px;
+    color: rgb(112,117,122);
+}
+
+@media (min-width: 896px) {
+    .foo-bar:last-of-type {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding: 0px 0px
+    }
+    .foo-bar ul:last-of-type li:first-of-type {
+        padding-left: 15px
+    }
+}
+
+@media (max-width: 480px) {
+    #search-bar {
+        width: 80%;
+    }
+}
+
+@media (max-height: 600px) {
+    #logo img {
+        transform: scale(80%);
+    }
+    main {
+        padding: 50px 0;
+    }
+}
+
